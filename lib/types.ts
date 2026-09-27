@@ -63,13 +63,14 @@ export interface SocialLink {
 export interface InquiryFormData {
   type: 'general' | 'custom-order'
   name: string
-  email: string
   phone?: string
-  message: string
-  eventDate?: string
-  cakeSize?: string
+  product: string
+  quantity: number
+  variant?: string
+  preferredDate?: string
+  occasion?: string
   flavor?: string
   budget?: string
-  honeypot: string
-  turnstileToken: string
+  requirements?: string
+  notes?: string
 }

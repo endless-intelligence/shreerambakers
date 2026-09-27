@@ -1,31 +1,15 @@
 import { Metadata } from 'next'
 import { Section, SectionHeader } from '@/components/layout/Section'
 import { InquiryForm } from '@/components/forms/InquiryForm'
-import Image from 'next/image'
 import { getSiteSettings } from '@/lib/content-service'
-import { MapPin, Phone, Clock, Mail, MessageCircle, Instagram, Facebook, Calendar } from 'lucide-react'
-import Link from 'next/link'
+import { MapPin, Phone, Clock, MessageCircle, Instagram, Facebook, Calendar } from 'lucide-react'
 import { cn } from '@/lib/utils'
+import { buildWhatsAppContactUrl } from '@/lib/whatsapp'
 
 export const metadata: Metadata = {
   title: 'Contact',
   description: 'Get in touch with Shree Ram Bakers. Visit us in Sector 15, Chandigarh, call us, or send a message.',
 }
-
-const contactMethods = [
-  {
-    icon: Mail,
-    title: 'Email Us',
-    details: [
-      'hello@shreerambakers.com',
-      'We reply within 24 hours',
-    ],
-    action: {
-      label: 'Send Email',
-      href: 'mailto:hello@shreerambakers.com',
-    },
-  },
-]
 
 export default async function ContactPage() {
   const settings = await getSiteSettings()
@@ -44,16 +28,16 @@ export default async function ContactPage() {
       action: { label: 'Call Now', href: `tel:${phoneNumbers[0]}` },
     },
     {
-      icon: Mail,
-      title: 'Email Us',
-      details: ['Send us a message through the form', 'We reply within 24 hours'],
-      action: { label: 'Send a Message', href: '#contact-form' },
+      icon: MessageCircle,
+      title: 'WhatsApp Us',
+      details: ['Chat with the bakery directly', 'Send your order enquiry on WhatsApp'],
+      action: { label: 'Open WhatsApp', href: buildWhatsAppContactUrl() },
     },
   ]
   const socialLinks = [
     { icon: Instagram, label: 'Instagram', href: settings.socialLinks.find(link => link.platform === 'instagram')?.url ?? '#', color: 'text-pink-500' },
     { icon: Facebook, label: 'Facebook', href: settings.socialLinks.find(link => link.platform === 'facebook')?.url ?? '#', color: 'text-blue-600' },
-    { icon: MessageCircle, label: 'WhatsApp', href: settings.socialLinks.find(link => link.platform === 'whatsapp')?.url ?? '#', color: 'text-green-500' },
+    { icon: MessageCircle, label: 'WhatsApp', href: buildWhatsAppContactUrl(), color: 'text-green-500' },
   ]
 
   return (
@@ -61,7 +45,7 @@ export default async function ContactPage() {
       <Section className="pb-6 pt-8 md:pb-8 md:pt-12" aria-label="Contact header">
         <SectionHeader
           title="Get in Touch"
-          subtitle="We'd love to hear from you — visit, call, or write"
+          subtitle="We'd love to hear from you — visit, call, or message us on WhatsApp"
         />
       </Section>
 
@@ -100,11 +84,11 @@ export default async function ContactPage() {
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-16">
           <div>
             <h2 className="font-display text-3xl md:text-4xl font-semibold text-ink mb-6">
-              Send us a message
+              Start an enquiry on WhatsApp
             </h2>
             <p className="font-body text-lg text-[rgba(40,34,29,0.7)] leading-relaxed mb-8">
               Have a question about our products, need help with an order, or just want to say hello?
-              Fill out the form and we&apos;ll get back to you within 24 hours.
+              Share what you&apos;re looking for and continue to WhatsApp to send your enquiry directly to the bakery.
             </p>
 
             <div className="space-y-4">
@@ -114,7 +98,7 @@ export default async function ContactPage() {
                 </div>
                 <div>
                   <h4 className="font-display font-medium text-ink">Response Time</h4>
-                  <p className="font-body text-sm text-[rgba(40,34,29,0.7)]">Within 24 hours on business days</p>
+                  <p className="font-body text-sm text-[rgba(40,34,29,0.7)]">We&apos;ll reply as soon as we can during opening hours</p>
                 </div>
               </div>
 

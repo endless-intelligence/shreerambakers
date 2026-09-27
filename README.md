@@ -8,9 +8,8 @@ A production-ready, fully responsive website for Shree Ram Bakers — an artisan
 - **Styling**: Tailwind CSS + CSS Custom Properties
 - **Animation**: Framer Motion (hero sequence only)
 - **CMS**: Sanity.io (free tier)
-- **Email**: Resend + React Email
+- **WhatsApp**: Click-to-chat with a pre-filled enquiry
 - **Forms**: React Hook Form + Zod
-- **Spam Protection**: Cloudflare Turnstile + honeypot
 - **Hosting**: Vercel
 
 ## Features
@@ -18,7 +17,7 @@ A production-ready, fully responsive website for Shree Ram Bakers — an artisan
 - ✅ Responsive design (375px - 1536px+)
 - ✅ Semantic HTML, WCAG AA accessible
 - ✅ SEO optimized with JSON-LD schemas
-- ✅ Automated email notifications (owner + customer auto-reply)
+- ✅ Enquiries handed off to WhatsApp with product and order details pre-filled
 - ✅ Content managed via Sanity Studio
 - ✅ ISR revalidation on content changes
 - ✅ Performance optimized (LCP < 2s target)
@@ -31,8 +30,7 @@ A production-ready, fully responsive website for Shree Ram Bakers — an artisan
 - Node.js 18+
 - npm or yarn
 - Sanity.io account (free tier)
-- Resend account (for emails)
-- Cloudflare Turnstile account (for spam protection)
+- A WhatsApp Business number that can receive customer enquiries
 
 ### Installation
 
@@ -87,7 +85,6 @@ bakery-website/
 │  │  ├─ custom-orders/    # Custom orders page
 │  │  └─ contact/          # Contact page
 │  ├─ api/
-│  │  ├─ inquiry/          # Form submission endpoint
 │  │  └─ revalidate/       # Sanity webhook endpoint
 │  ├─ studio/[[...tool]]/  # Sanity Studio
 │  ├─ layout.tsx
@@ -100,7 +97,7 @@ bakery-website/
 │  └─ marketing/           # Hero, TestimonialCarousel, GalleryLightbox
 ├─ lib/
 │  ├─ sanity/              # Sanity client & schemas
-│  ├─ email/               # Resend + React Email templates
+│  ├─ whatsapp.ts          # WhatsApp contact number and click-to-chat message helper
 │  ├─ validation/          # Zod schemas
 │  ├─ utils.ts
 │  ├─ types.ts
@@ -150,18 +147,9 @@ bakery-website/
 Content lives in `lib/content.ts` with images in `public/images/`.
 Changes require code edit + git push (Vercel auto-deploys).
 
-## Email Setup (Resend)
+## WhatsApp Enquiries
 
-1. Sign up at [resend.com](https://resend.com)
-2. Verify your sending domain
-3. Create API key
-4. Add `RESEND_API_KEY`, `OWNER_EMAIL`, `FROM_EMAIL` to `.env.local`
-
-## Spam Protection (Turnstile)
-
-1. Create a site at [Cloudflare Turnstile](https://dash.cloudflare.com/?to=/:account/turnstile)
-2. Add site key to `NEXT_PUBLIC_TURNSTILE_SITE_KEY`
-3. Add secret key to `TURNSTILE_SECRET_KEY`
+The enquiry form opens WhatsApp with a structured, pre-filled message. Customers review it and tap Send; the website does not transmit or store their form data. The bakery's WhatsApp number is centralized as `WHATSAPP_NUMBER` in `lib/whatsapp.ts`; update it there using digits only, including the country code (for example, `91` for India). No Meta API credentials, webhook, or WhatsApp-specific Vercel environment variables are required.
 
 ## Deployment (Vercel)
 
@@ -183,7 +171,6 @@ Vercel handles:
 - [ ] One `<h1>` per page
 - [ ] Keyboard navigation with visible focus
 - [ ] Form labels + `aria-describedby` for errors
-- [ ] `aria-live` status for form submissions
 - [ ] Alt text required in CMS
 - [ ] Skip-to-content link
 - [ ] `prefers-reduced-motion` respected

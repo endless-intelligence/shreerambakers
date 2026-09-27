@@ -1,4 +1,5 @@
 import type { Product, Category, Testimonial, GalleryImage, SiteSettings, DietaryTag } from '@/lib/types'
+import { buildWhatsAppContactUrl } from '@/lib/whatsapp'
 
 export const fallbackCategories: Category[] = [
   { id: '1', name: 'Cakes', slug: 'cakes', order: 1 },
@@ -392,7 +393,7 @@ export const fallbackSettings: SiteSettings = {
   socialLinks: [
     { platform: 'instagram', url: 'https://www.instagram.com/shree_ram_bakers.1?stkn=NDNyMTVhNXUzZHFp' },
     { platform: 'facebook', url: 'https://www.facebook.com/profile.php?id=61577326994019' },
-    { platform: 'whatsapp', url: 'https://wa.me/916389368233' },
+    { platform: 'whatsapp', url: buildWhatsAppContactUrl() },
   ],
   heroImage: '/images/hero-bakery.png',
 }

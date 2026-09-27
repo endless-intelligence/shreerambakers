@@ -42,15 +42,20 @@ const dietaryOptions = [
 ]
 
 const processSteps = [
-  { step: '01', title: 'Inquire', description: 'Fill out the form with your vision, date, and budget. We\'ll reply within 24 hours.' },
+  { step: '01', title: 'Enquire', description: 'Share your vision, date, and budget with us directly on WhatsApp.' },
   { step: '02', title: 'Design', description: 'We\'ll sketch concepts, discuss flavors, and finalize the design together.' },
   { step: '03', title: 'Confirm', description: 'Approve the design and pay a 50% deposit to secure your date.' },
   { step: '04', title: 'Create', description: 'We bake fresh for your event — never frozen, never pre-made.' },
   { step: '05', title: 'Deliver', description: 'Pick up at the bakery or arrange delivery within Chandigarh.' },
 ]
 
-export default async function CustomOrdersPage() {
+interface CustomOrdersPageProps {
+  searchParams?: { product?: string; category?: string } | Promise<{ product?: string; category?: string }>
+}
+
+export default async function CustomOrdersPage({ searchParams }: CustomOrdersPageProps) {
   const settings = await getSiteSettings()
+  const enquiryParams = await searchParams
 
   return (
     <div className="min-h-screen">
@@ -146,7 +151,11 @@ export default async function CustomOrdersPage() {
           subtitle="Tell us about your celebration — we'll bring it to life"
         />
         <div className="max-w-2xl mx-auto">
-          <InquiryForm variant="custom-order" />
+          <InquiryForm
+            variant="custom-order"
+            initialData={enquiryParams?.product ? { product: enquiryParams.product } : undefined}
+            productCategory={enquiryParams?.category}
+          />
         </div>
       </Section>
 

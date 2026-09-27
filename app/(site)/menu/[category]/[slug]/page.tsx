@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 import Image from 'next/image'
 import Link from 'next/link'
-import { ArrowLeft, ShoppingBag } from 'lucide-react'
+import { ArrowLeft, MessageCircle } from 'lucide-react'
 import { notFound } from 'next/navigation'
 import { getAllProducts, getProductBySlug } from '@/lib/content-service'
 import { Badge } from '@/components/ui/Badge'
@@ -67,9 +67,9 @@ export default async function ProductPage({ params }: ProductPageProps) {
             </div>
 
             <Button variant="primary" size="lg" className="mt-8" asChild>
-              <Link href={`/custom-orders?product=${encodeURIComponent(product.name)}`}>
-                <ShoppingBag className="h-4 w-4" aria-hidden="true" />
-                Ask about this item
+              <Link href={`/custom-orders?product=${encodeURIComponent(product.name)}&category=${encodeURIComponent(product.category.name)}`}>
+                <MessageCircle className="h-4 w-4" aria-hidden="true" />
+                Enquire on WhatsApp
               </Link>
             </Button>
           </div>

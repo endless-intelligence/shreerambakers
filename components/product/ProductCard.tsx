@@ -5,7 +5,7 @@ import Link from 'next/link'
 import { cn, formatPrice } from '@/lib/utils'
 import { Badge } from '@/components/ui/Badge'
 import { Button } from '@/components/ui/Button'
-import { ShoppingBag } from 'lucide-react'
+import { MessageCircle } from 'lucide-react'
 import type { Product } from '@/lib/types'
 
 interface ProductCardProps {
@@ -68,9 +68,9 @@ export function ProductCard({ product, variant = 'default' }: ProductCardProps) 
           className="w-full"
           asChild
         >
-          <Link href={`/custom-orders?product=${encodeURIComponent(product.name)}`} className="flex items-center justify-center gap-2">
-            <ShoppingBag className="w-4 h-4" aria-hidden="true" />
-            Ask about this
+          <Link href={`/custom-orders?product=${encodeURIComponent(product.name)}&category=${encodeURIComponent(product.category.name)}`} className="flex items-center justify-center gap-2">
+            <MessageCircle className="w-4 h-4" aria-hidden="true" />
+            Enquire on WhatsApp
           </Link>
         </Button>
       </div>

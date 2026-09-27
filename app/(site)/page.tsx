@@ -9,11 +9,13 @@ import {
   MapPin,
   MessageCircle,
   MoveUpRight,
+  Phone,
   Star,
   Users,
 } from 'lucide-react'
 import { getAllProducts, getAllTestimonials, getSiteSettings } from '@/lib/content-service'
 import { googleReviewLinks } from '@/lib/content'
+import { buildWhatsAppContactUrl } from '@/lib/whatsapp'
 
 export const metadata: Metadata = {
   title: 'Sweet moments since generations',
@@ -253,8 +255,16 @@ export default async function HomePage() {
             <h2 className="mt-3 font-display text-4xl font-medium leading-none md:text-5xl">Bring home a little joy.</h2>
             <p className="mt-3 max-w-xl text-sm leading-6 text-white/70">Order your favourites now or talk to us about a cake made especially for your celebration.</p>
           </div>
-          <div className="flex flex-col gap-3 sm:flex-row">
-            <a href={`tel:${settings.phone.split(' / ')[0]}`} className="btn-landing-light"><MessageCircle className="h-4 w-4" /> Call to order</a>
+          <div className="flex flex-col gap-3 sm:flex-row sm:flex-wrap sm:justify-end">
+            <a href={`tel:${settings.phone.split(' / ')[0]}`} className="btn-landing-light"><Phone className="h-4 w-4" /> Call to order</a>
+            <a
+              href={buildWhatsAppContactUrl()}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center justify-center gap-2 rounded-full bg-[#25D366] px-5 py-3 text-sm font-medium text-white transition-colors hover:bg-[#1ebe5b] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/80 focus-visible:ring-offset-2 focus-visible:ring-offset-jam"
+            >
+              <MessageCircle className="h-4 w-4" aria-hidden="true" /> WhatsApp enquiry
+            </a>
             <Link href="#visit" className="btn-landing-dark group">Visit our store <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" /></Link>
           </div>
         </div>

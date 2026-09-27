@@ -1,7 +1,8 @@
 'use client'
 
-import { Facebook, Instagram, Youtube } from 'lucide-react'
+import { Facebook, Instagram, MessageCircle, Youtube } from 'lucide-react'
 import Image from 'next/image'
+import { buildWhatsAppContactUrl } from '@/lib/whatsapp'
 
 export function Footer() {
   return (
@@ -20,6 +21,10 @@ export function Footer() {
             <a href="#story" className="transition-colors hover:text-jam">Our story</a>
             <a href="#reviews" className="transition-colors hover:text-jam">Reviews</a>
             <a href="#visit" className="transition-colors hover:text-jam">Visit us</a>
+            <a href={buildWhatsAppContactUrl()} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 transition-colors hover:text-jam">
+              <MessageCircle className="h-4 w-4" aria-hidden="true" />
+              WhatsApp us
+            </a>
           </div>
         </div>
 
