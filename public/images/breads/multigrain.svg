@@ -1,0 +1,9 @@
+<svg width="400" height="300" viewBox="0 0 400 300" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="400" height="300" fill="#F1E6CC"/>
+  <ellipse cx="200" cy="180" rx="100" ry="50" fill="#A08040" opacity="0.6"/>
+  <ellipse cx="200" cy="160" rx="90" ry="40" fill="#C8A878" opacity="0.8"/>
+  <circle cx="160" cy="150" r="3" fill="#6B4226"/>
+  <circle cx="220" cy="155" r="3" fill="#6B4226"/>
+  <circle cx="180" cy="170" r="3" fill="#6B4226"/>
+  <text x="200" y="270" font-family="Georgia, serif" font-size="14" fill="#6B2737" text-anchor="middle">Multigrain Loaf</text>
+</svg>

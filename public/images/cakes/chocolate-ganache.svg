@@ -1,0 +1,10 @@
+<svg width="400" height="300" viewBox="0 0 400 300" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="400" height="300" fill="#F1E6CC"/>
+  <rect x="120" y="120" width="160" height="120" rx="8" fill="#2D1B14"/>
+  <rect x="120" y="100" width="160" height="20" rx="4" fill="#3D2314"/>
+  <rect x="120" y="160" width="160" height="20" rx="4" fill="#3D2314"/>
+  <rect x="120" y="220" width="160" height="20" rx="4" fill="#3D2314"/>
+  <ellipse cx="200" cy="110" rx="80" ry="10" fill="#1A1008" opacity="0.8"/>
+  <path d="M140 110 Q200 90 260 110" stroke="#3D2314" stroke-width="3" fill="none" opacity="0.5"/>
+  <text x="200" y="270" font-family="Georgia, serif" font-size="14" fill="#6B2737" text-anchor="middle">Chocolate Ganache Cake</text>
+</svg>

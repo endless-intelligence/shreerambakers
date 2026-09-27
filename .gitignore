@@ -1,0 +1,8 @@
+node_modules/
+.next/
+.vercel/
+coverage/
+*.tsbuildinfo
+.env*
+!.env.example
+ChatGPT Image Sep 27, 2026, 01_25_43 PM.png

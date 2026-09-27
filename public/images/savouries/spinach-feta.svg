@@ -1,0 +1,10 @@
+<svg width="400" height="300" viewBox="0 0 400 300" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="400" height="300" fill="#F1E6CC"/>
+  <path d="M150 160 L130 240 L270 240 L250 160 Z" fill="#F5E6A0" stroke="#D4B850" stroke-width="2"/>
+  <path d="M160 170 Q200 150 240 170" fill="#6BCB77" opacity="0.6"/>
+  <path d="M165 175 Q200 155 235 175" fill="#FFFFFF" opacity="0.4"/>
+  <circle cx="175" cy="180" r="3" fill="#FFFFFF"/>
+  <circle cx="225" cy="185" r="3" fill="#FFFFFF"/>
+  <circle cx="200" cy="200" r="3" fill="#FFFFFF"/>
+  <text x="200" y="270" font-family="Georgia, serif" font-size="14" fill="#6B2737" text-anchor="middle">Spinach Feta Puff</text>
+</svg>

@@ -1,0 +1,18 @@
+<svg width="400" height="300" viewBox="0 0 400 300" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="400" height="300" fill="#F1E6CC"/>
+  <circle cx="150" cy="150" r="50" fill="#C8A878" stroke="#B89868" stroke-width="2"/>
+  <circle cx="150" cy="150" r="45" fill="#D8B888"/>
+  <circle cx="135" cy="140" r="5" fill="#8B4513"/>
+  <circle cx="165" cy="145" r="4" fill="#8B4513"/>
+  <circle cx="155" cy="165" r="4" fill="#8B4513"/>
+  <circle cx="140" cy="170" r="3" fill="#8B4513"/>
+  
+  <circle cx="250" cy="150" r="50" fill="#C8A878" stroke="#B89868" stroke-width="2"/>
+  <circle cx="250" cy="150" r="45" fill="#D8B888"/>
+  <circle cx="235" cy="140" r="5" fill="#8B4513"/>
+  <circle cx="265" cy="145" r="4" fill="#8B4513"/>
+  <circle cx="255" cy="165" r="4" fill="#8B4513"/>
+  <circle cx="240" cy="170" r="3" fill="#8B4513"/>
+  
+  <text x="200" y="270" font-family="Georgia, serif" font-size="14" fill="#6B2737" text-anchor="middle">Oatmeal Raisin Cookies</text>
+</svg>

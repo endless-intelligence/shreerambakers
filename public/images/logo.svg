@@ -1,0 +1,8 @@
+<svg width="120" height="120" viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <circle cx="60" cy="60" r="56" fill="#3A2E23"/>
+  <path d="M60 20C42 20 28 34 28 52C28 62 38 70 48 78C58 86 70 90 78 90C86 90 94 86 94 78C94 70 104 62 104 52C104 34 90 20 72 20C66 20 60 20 60 20Z" fill="#FAF5E9"/>
+  <path d="M60 30C46 30 36 40 36 54C36 60 42 66 50 72C58 78 68 82 76 82C84 82 90 78 90 72C90 66 96 60 96 54C96 40 86 30 74 30C66 30 60 30 60 30Z" fill="#3A2E23"/>
+  <circle cx="60" cy="54" r="8" fill="#FAF5E9"/>
+  <path d="M45 65Q60 55 75 65" stroke="#E8B94A" stroke-width="3" stroke-linecap="round" fill="none"/>
+  <text x="60" y="105" font-family="Georgia, serif" font-size="10" fill="#E8B94A" text-anchor="middle" font-weight="bold">EST. 1998</text>
+</svg>

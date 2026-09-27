@@ -1,0 +1,8 @@
+<svg width="800" height="600" viewBox="0 0 800 600" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect width="800" height="600" fill="#F2DEC0"/>
+<ellipse cx="400" cy="450" rx="255" ry="40" fill="#9D6B46" opacity=".28"/>
+<path d="M180 360C205 260 300 215 400 215C500 215 595 260 620 360C530 410 270 410 180 360Z" fill="#D99A53" stroke="#8B4B2D" stroke-width="10"/>
+<path d="M205 350C265 320 535 320 595 350" stroke="#F8D998" stroke-width="20"/>
+<path d="M235 295C270 260 315 245 350 242M450 242C485 245 530 260 565 295" stroke="#FFF0C5" stroke-width="10" stroke-linecap="round"/>
+<text x="400" y="520" font-family="Georgia,serif" font-size="34" fill="#6B2737" text-anchor="middle">Fresh Patties</text>
+</svg>

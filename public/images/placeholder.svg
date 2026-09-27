@@ -1,0 +1,5 @@
+<svg width="400" height="300" viewBox="0 0 400 300" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="400" height="300" fill="#F1E6CC"/>
+  <text x="200" y="140" font-family="Georgia, serif" font-size="20" fill="#3A2E23" text-anchor="middle" opacity="0.4">Image Placeholder</text>
+  <text x="200" y="170" font-family="Georgia, serif" font-size="14" fill="#6B2737" text-anchor="middle" opacity="0.5">4:3 aspect ratio</text>
+</svg>

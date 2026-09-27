@@ -1,0 +1,10 @@
+<svg width="400" height="300" viewBox="0 0 400 300" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="400" height="300" fill="#F1E6CC"/>
+  <path d="M100 180 Q150 120 200 140 Q250 160 300 180 Q250 200 200 220 Q150 200 100 180" fill="#F5E6A0" stroke="#D4B850" stroke-width="2"/>
+  <ellipse cx="200" cy="160" rx="60" ry="25" fill="#E8C860" opacity="0.7"/>
+  <circle cx="170" cy="155" r="4" fill="#8B6914"/>
+  <circle cx="210" cy="150" r="4" fill="#8B6914"/>
+  <circle cx="190" cy="165" r="4" fill="#8B6914"/>
+  <circle cx="230" cy="160" r="4" fill="#8B6914"/>
+  <text x="200" y="270" font-family="Georgia, serif" font-size="14" fill="#6B2737" text-anchor="middle">Almond Croissant</text>
+</svg>

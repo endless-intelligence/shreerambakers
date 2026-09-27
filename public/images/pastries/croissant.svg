@@ -1,0 +1,7 @@
+<svg width="400" height="300" viewBox="0 0 400 300" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="400" height="300" fill="#F1E6CC"/>
+  <path d="M100 180 Q150 120 200 140 Q250 160 300 180 Q250 200 200 220 Q150 200 100 180" fill="#F5E6A0" stroke="#D4B850" stroke-width="2"/>
+  <path d="M120 170 Q160 140 200 150 Q240 160 280 170" stroke="#D4B850" stroke-width="1" fill="none" opacity="0.5"/>
+  <path d="M125 175 Q165 145 200 155 Q235 165 275 175" stroke="#D4B850" stroke-width="1" fill="none" opacity="0.3"/>
+  <text x="200" y="270" font-family="Georgia, serif" font-size="14" fill="#6B2737" text-anchor="middle">Butter Croissant</text>
+</svg>

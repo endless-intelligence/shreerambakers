@@ -1,0 +1,7 @@
+<svg width="1920" height="1080" viewBox="0 0 1920 1080" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1920" height="1080" fill="#3A2E23"/>
+  <text x="960" y="500" font-family="Georgia, serif" font-size="48" fill="#FAF5E9" text-anchor="middle" opacity="0.3">Shree Ram Bakers</text>
+  <text x="960" y="560" font-family="Georgia, serif" font-size="24" fill="#E8B94A" text-anchor="middle" opacity="0.5">Hero Image Placeholder</text>
+  <circle cx="960" cy="700" r="60" stroke="#FAF5E9" stroke-width="2" fill="none" opacity="0.3"/>
+  <path d="M920 700 Q960 660 1000 700" stroke="#E8B94A" stroke-width="3" fill="none" opacity="0.5"/>
+</svg>
